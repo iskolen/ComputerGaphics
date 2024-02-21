@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Viewer</title>
+</head>
+<body>
+<div class="button-container">
+    <button class="file-button" onclick="toggleActions()">File</button>
+    <div class="actions" id="actions">
+        <button class="open-button"><label for="file">Open</label></button>
+        <input id="file" type="file" style="display: none;" accept=".png, .jpeg, .bmp">
+    </div>
+</div>
+<div id="image-container" class="image-container"></div>
+<script src="script.js"></script>
+</body>
+</html>
