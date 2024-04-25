@@ -27,7 +27,7 @@ void OnResizeWindow(int width, int height)
 int main(int argc, char** argv)
 {
     GlutInitializer glutInit(&argc, argv);
-    glutInit.InitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
+    glutInit.InitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
     glutInit.InitWindowSize(WINDOW_WIDTH, WINDOW_HEIGTH);
     glutInit.CreateWindow(WINDOW_TITLE);
 

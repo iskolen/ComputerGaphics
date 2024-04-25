@@ -60,29 +60,20 @@ void FigureDrawer::DrawHalfEllipseOutline(float xCenter, float yCenter, float rx
 
 void FigureDrawer::DrawRectangle(float xTopLeft, float yTopLeft, float width, float height, float angle)
 {
-    float angleRad = angle * (M_PI / 180.0f);
+    glPushMatrix();
 
-    float centerX = xTopLeft + width / 2.0f;
-    float centerY = yTopLeft + height / 2.0f;
-
-    float x1 = (xTopLeft - centerX) * cos(angleRad) - (yTopLeft - centerY) * sin(angleRad) + centerX;
-    float y1 = (xTopLeft - centerX) * sin(angleRad) + (yTopLeft - centerY) * cos(angleRad) + centerY;
-
-    float x2 = (xTopLeft + width - centerX) * cos(angleRad) - (yTopLeft - centerY) * sin(angleRad) + centerX;
-    float y2 = (xTopLeft + width - centerX) * sin(angleRad) + (yTopLeft - centerY) * cos(angleRad) + centerY;
-
-    float x3 = (xTopLeft + width - centerX) * cos(angleRad) - (yTopLeft + height - centerY) * sin(angleRad) + centerX;
-    float y3 = (xTopLeft + width - centerX) * sin(angleRad) + (yTopLeft + height - centerY) * cos(angleRad) + centerY;
-
-    float x4 = (xTopLeft - centerX) * cos(angleRad) - (yTopLeft + height - centerY) * sin(angleRad) + centerX;
-    float y4 = (xTopLeft - centerX) * sin(angleRad) + (yTopLeft + height - centerY) * cos(angleRad) + centerY;
+    glTranslatef(xTopLeft + width / 2.0f, yTopLeft + height / 2.0f, 0.0f);
+    glRotatef(angle, 0.0f, 0.0f, 1.0f);
+    glScalef(width, height, 1.0f);
 
     glBegin(GL_QUADS);
-    glVertex2f(x1, y1);
-    glVertex2f(x2, y2);
-    glVertex2f(x3, y3);
-    glVertex2f(x4, y4);
+    glVertex2f(-0.5f, -0.5f);
+    glVertex2f(0.5f, -0.5f);
+    glVertex2f(0.5f, 0.5f);
+    glVertex2f(-0.5f, 0.5f);
     glEnd();
+
+    glPopMatrix();
 }
 
 void FigureDrawer::DrawTriangle(float x1, float y1, float x2, float y2, float x3, float y3)
