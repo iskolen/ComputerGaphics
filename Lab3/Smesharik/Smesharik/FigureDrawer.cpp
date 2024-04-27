@@ -39,6 +39,7 @@ void FigureDrawer::DrawHalfEllipseOutline(float xCenter, float yCenter, float rx
 
     glLineWidth(lineWidth);
 
+    // Примитивы OpenGL
     glBegin(GL_LINES);
     for (float angle = 0; angle < M_PI; angle += step)
     {

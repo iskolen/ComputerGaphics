@@ -13,6 +13,8 @@ void OnResizeWindow(int width, int height)
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
 
+    // Разобраться какого размера матрица, что делает LoadIdentity
+    
     float aspectRatio = (float)width / (float)height;
 
     if (aspectRatio >= 1.0)

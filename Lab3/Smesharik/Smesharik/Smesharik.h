@@ -16,3 +16,4 @@ private:
     void DrawButterfly();
 };
 
+// Цвет бабочки
