@@ -1,7 +1,6 @@
 #pragma once
 #include "Cuboid.h"
 #include "Pyramid.h"
-#include "Rectangle.h"
 #include "BaseTexture.h"
 
 class Cottage

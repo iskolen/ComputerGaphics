@@ -23,3 +23,7 @@ BaseTexture TextureLoader::LoadTexture2D(std::string const& fileName) const
 
 	return BaseTexture(texture);
 }
+
+// Использовать мипмаппинг, анизатропная фильтрация
+
+//framebuffer basic

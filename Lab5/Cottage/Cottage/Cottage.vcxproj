@@ -154,7 +154,6 @@
     <ClCompile Include="GLFWInitializer.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="Pyramid.cpp" />
-    <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Street.cpp" />
     <ClCompile Include="TextureLoader.cpp" />
     <ClCompile Include="Window.cpp" />
@@ -168,7 +167,6 @@
     <ClInclude Include="GLFWInitializer.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Pyramid.h" />
-    <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Street.h" />
     <ClInclude Include="TextureLoader.h" />
     <ClInclude Include="Window.h" />

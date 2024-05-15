@@ -2,7 +2,7 @@
 class Sector
 {
 public:
-	explicit Sector(
+	Sector(
 		float radius, 
 		float startAngle, 
 		float endAngle, 

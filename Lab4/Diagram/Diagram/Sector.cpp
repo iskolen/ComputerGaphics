@@ -60,7 +60,7 @@ void Sector::Draw(const glm::vec3& color) const
         p1 = glm::vec3(x, y, m_zBottom);
         p2 = glm::vec3(xNext, yNext, m_zBottom);
 
-        //CalculateAndSetNormal(p0, p1, p2);
+        CalculateAndSetNormal(p0, p1, p2);
 
         glVertex3f(x, y, m_zBottom);
     }
@@ -125,6 +125,8 @@ void Sector::CalculateAndSetNormal(const glm::vec3& p0, const glm::vec3& p1, con
     auto normal = glm::normalize(glm::cross(v01, v02));
     glNormal3fv(glm::value_ptr(normal));
 }
+
+// Разобратся с освещением
 
 void Sector::DrawQuadVertices(const glm::vec3& p0, const glm::vec3& p1, const glm::vec3& p2, const glm::vec3& p3) const
 {

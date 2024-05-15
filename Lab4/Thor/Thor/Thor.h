@@ -3,7 +3,7 @@
 class Thor
 {
 public:
-	explicit Thor();
+	Thor();
 	void Draw() const;
 
 private:

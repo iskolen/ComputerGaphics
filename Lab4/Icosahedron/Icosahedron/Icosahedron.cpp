@@ -90,6 +90,10 @@ void Icosahedron::Draw() const
 			auto p1 = glm::make_vec3(vertices[facePoints[1]]);
 			auto p2 = glm::make_vec3(vertices[facePoints[2]]);
 
+			// Найти векторное произведение между двумя векторами
+			// Знать формулу диффузного освещения Ламберта и зеркального освещения Фонга
+			// Как извлечь камеру наблю
+
 			p0 *= m_size * 0.5f;
 			p1 *= m_size * 0.5f;
 			p2 *= m_size * 0.5f;

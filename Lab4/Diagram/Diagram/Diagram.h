@@ -4,7 +4,7 @@
 class Diagram
 {
 public:
-	explicit Diagram();
+	Diagram();
 	void Draw() const;
 
 private:
